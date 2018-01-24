@@ -81,14 +81,14 @@ app.get('/pets/:_id', function (req, res){
                 .then(response => {
                     response.json().then(json => {
                         let weather = json;
-                        if(weather.currently.precipProbability > 0.5 && (weather.currently.precipType == 'rain' || weather.currently.temperature > 0)){
+                        if(weather.daily.data[0].precipProbability > 0.5 && (weather.daily.data[0].precipType == 'rain' || weather.daily.data[0].temperatureHigh > 0)){
                             rain = true;
                             console.log('Umberella needed for ' + pet.name + ' at lat: ' + pet.latitude + ' lng: ' + pet.longitude);
                         }else{
                             rain = false;
                             console.log('Umberella not needed for ' + pet.name + ' at lat: ' + pet.latitude + ' lng: ' + pet.longitude);
                         }
-                        console.log('POP: ' + weather.currently.precipProbability + ' Prep type: ' + weather.currently.precipType + ' Temp: ' + weather.currently.temperature);
+                        console.log('POP: ' + weather.daily.data[0].precipProbability + ' Prep type: ' + weather.daily.data[0].precipType + ' Temp: ' + weather.daily.data[0].temperatureHigh);
                         //Render the pet view given a pet and wether
                         //or not that pet needs an umberella
                         res.render('viewPet', {

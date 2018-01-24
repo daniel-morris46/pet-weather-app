@@ -1,0 +1,24 @@
+<% include partials/header %>
+	<h1>Does My Pet Need An Umbrella?</h1>
+	<h2>Select a pet to find out.</h2>
+
+	<table style="width:100%">
+	  <tr>
+	    <th>Name</th>
+	    <th>Type</th> 
+	    <th>Breed</th>
+	    <th>Location</th>
+	  </tr>
+
+	  <% pets.forEach(function(pet){ %>
+	  <tr>
+		<td><a href='/pets/<%=pet._id%>'><%= pet.name %></a></td>
+		<td><%= pet.type %></td>
+		<td><%= pet.breed %></td>
+		<td><%= pet.location %></td>
+	  </tr>
+	  <% }) %>
+	</table>
+	<a href="/add">Add New Pet</a>
+
+<% include partials/footer %>

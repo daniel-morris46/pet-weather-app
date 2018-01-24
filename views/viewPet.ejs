@@ -1,0 +1,24 @@
+<% include partials/header %>
+	<%if (rain == true) { %>
+		<%if (type == 'Dog') { %>
+			<img src="https://highheelsandhighnotes.files.wordpress.com/2014/01/image3.jpg" height="300" width=auto>
+		<% } else { %>
+			<img src="https://media.giphy.com/media/ISJ6l3Kb4gihW/giphy.gif" height="300" width=auto>
+		<% } %>
+		<h1>Yup!</h1>
+		<p> It looks like <%= pet.name %> is going to need
+		one in <%= pet.location %>.
+		<a href='/'> Lookup a different pet </a>
+	<% } else { %>
+		<%if (type == 'Dog') { %>
+			<img src="https://vignette.wikia.nocookie.net/epic-rap-battles-of-cartoons/images/8/8a/Snoopy.png/revision/latest?cb=20170814040625" height="300" width=auto>
+		<% } else { %>
+			<img src="https://s-media-cache-ak0.pinimg.com/originals/83/76/c6/8376c67de9f08b0d25d8358c068d39bf.jpg" height="300" width=auto>
+		<% } %>
+		<h1>Nope!</h1>
+		<p> It doesn't look like <%= pet.name %> is going to need
+		one in <%= pet.location %>.
+		<a href='/'> Lookup a different pet </a>
+
+	<% } %>
+<% include partials/footer %>

@@ -1,0 +1,30 @@
+<% include partials/header %>
+	
+	<h1>Add Pet</h1>
+
+	<form method="POST" action="https://daniels-pet-weather-api.herokuapp.com/api">
+		<label>Name</label><br>
+		<input type="text" name="name">
+		<br>
+		<label>Type</label><br>
+		<select name="type">
+		    <option value="Dog">Dog</option>
+		    <option value="Cat">Cat</option>
+		</select>
+
+		<br>
+		<label>Breed</label><br>
+		<input type="text" name="breed">
+		<br>
+		<label>Location</label><br>
+		<input type="text" name="location">
+		<br>
+		<label>Latitude</label><br>
+		<input type="text" name="latitude">
+		<br>
+		<label>Longitude</label><br>
+		<input type="text" name="longitude">
+		<br>
+		<input type="submit" value="Submit">
+	</form>
+<% include partials/footer %>

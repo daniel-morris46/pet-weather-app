@@ -1,0 +1,16 @@
+{
+  "name": "petweatherapp",
+  "version": "1.0.0",
+  "description": "Pet Weather App",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Daniel Morris",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "node-fetch": "^1.7.3"
+  }
+}

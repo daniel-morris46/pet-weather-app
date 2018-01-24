@@ -23,7 +23,7 @@ let options = {
     mode: 'cors'
 }
 
-let petListUri = 'https://daniels-pet-weather-api.herokuapp.com/api';
+let petListUri = 'https://daniels-pet-shelter-api.herokuapp.com/api';
 
 let petListReq = new fetch.Request(petListUri, options);
 
